@@ -12,12 +12,12 @@ namespace Registro_Roles.BLL
 {
     public class rPermisosBLL
     {
-        public static bool Guardar(rPermiso permiso)
+        public static bool Guardar(rPermiso Permiso)
         {
-            if (!Existe(permiso.RolId))
-                return Insertar(permiso);
+            if (!Existe(Permiso.RolId))
+                return Insertar(Permiso);
             else
-                return Modificar(permiso);
+                return Modificar(Permiso);
         }
 
         private static bool Existe(int RolId)
@@ -42,14 +42,14 @@ namespace Registro_Roles.BLL
             return ok;
         }
 
-        private static bool Insertar(rPermiso permiso)
+        private static bool Insertar(rPermiso Permiso)
         {
             Contexto contexto = new Contexto();
             bool ok = false;
 
             try
             {
-                contexto.rPermiso.Add(permiso);
+                contexto.rPermiso.Add(Permiso);
                 ok = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -65,14 +65,14 @@ namespace Registro_Roles.BLL
             return ok;
         }
 
-        private static bool Modificar(rPermiso permiso)
+        private static bool Modificar(rPermiso Permiso)
         {
             Contexto contexto = new Contexto();
             bool ok = false;
 
             try
             {
-                contexto.Entry(permiso).State = EntityState.Modified;
+                contexto.Entry(Permiso).State = EntityState.Modified;
                 ok = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -90,10 +90,10 @@ namespace Registro_Roles.BLL
         public static rPermiso Buscar(int RolId)
         {
             Contexto contexto = new Contexto();
-            rPermiso zapato;
+            rPermiso Permiso;
             try
             {
-                zapato = contexto.rPermiso.Find(RolId);//Busca el registro en la base de datos.
+                Permiso = contexto.rPermiso.Find(RolId);//Busca el registro en la base de datos.
             }
             catch (Exception)
             {
@@ -105,7 +105,7 @@ namespace Registro_Roles.BLL
                 contexto.Dispose();
             }
 
-            return zapato;
+            return Permiso;
         }
 
         public static bool Eliminar(int RolId)

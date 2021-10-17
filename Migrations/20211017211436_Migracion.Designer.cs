@@ -8,7 +8,7 @@ using Registro_Roles.DAL;
 namespace Registro_Roles.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211016225226_Migracion")]
+    [Migration("20211017211436_Migracion")]
     partial class Migracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
