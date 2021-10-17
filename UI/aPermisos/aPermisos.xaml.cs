@@ -90,7 +90,7 @@ namespace Registro_Roles.UI.aPermisos
         {
             var detalle = new aPermisosDetalle
             {
-                Permiso = rPermiso,
+                Permiso = Permiso,
                 RolId = Permisoo.RolId
             };
 
@@ -118,8 +118,8 @@ namespace Registro_Roles.UI.aPermisos
         {
             if (RolIdComboBox.SelectedIndex != -1)
             {
-                rPermiso = (rPermiso)RolIdComboBox.SelectedItem;
-                rPermiso.RolId = 0;
+                Permiso = (rPermiso)RolIdComboBox.SelectedItem;
+                Permiso.RolId = 0;
             }
         }
        
