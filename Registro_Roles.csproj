@@ -18,4 +18,16 @@
     <Folder Include="DATA\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DATA\aPermiso.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="UI\aPermisos\aPermisos.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
 </Project>

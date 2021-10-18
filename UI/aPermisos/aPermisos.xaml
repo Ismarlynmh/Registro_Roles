@@ -70,7 +70,7 @@
                 <!--Eliminar-->
                 <Button Name="EliminarButton" Height="20" FontSize="11"  Click="EliminarButton_Click" Margin="5,0,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Elimanr" FontSize="12" Padding="-1"/>
+                        <Label Content="Eliminar" FontSize="12" Padding="-1"/>
                     </StackPanel>
                 </Button>
 

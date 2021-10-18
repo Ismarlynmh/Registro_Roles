@@ -27,8 +27,8 @@ namespace Registro_Roles.UI.aPermisos
         public aPermisos()
         {
             InitializeComponent();
-            Permiso = new rPermiso();
-            this.DataContext = Permiso;
+            Permisoo = new aPermiso();
+            this.DataContext = Permisoo;
             //Llenamos el combobox
             RolIdComboBox.ItemsSource = rPermisosBLL.GetList(X => true);
             RolIdComboBox.SelectedValue = "RolId";
